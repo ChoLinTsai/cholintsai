@@ -1,0 +1,8 @@
+div#master-wrap {
+	@include wh(normal, 100vw, 100vh);
+	display: grid;
+	grid-template-columns:
+		[col-1] 1fr [col-2] 3fr [col-3];
+	grid-template-rows:
+		[row-1] 1fr [row-2];
+}

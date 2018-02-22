@@ -1,2 +1,13 @@
 @import '../bootstrap/customizations.scss';
 @import "./partials/resources/fonts.scss";
+
+@import "./partials/root.scss";
+
+@import "./partials/master-wrap.scss";
+@import "./partials/mq/mq_master-wrap.scss";
+
+@import "./partials/left-container.scss";
+@import "./partials/mq/mq_left-container.scss";
+
+@import "./partials/right-container.scss";
+@import "./partials/mq/mq_right-container.scss";
