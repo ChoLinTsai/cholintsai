@@ -1,15 +1,9 @@
-HTML  
-CSS  
-Sass  
-Boostrap3  
-Purifycss  
-Javascript  
-jQuery
-Babel-env  
-Webpack-dev-server  
-Rimraf  
-File-loader  
-Image-webpack-loader  
+2018/2/23
+master-wrap, left and right container and panel layout finished.
 
-Optional:  
-Hot Module Replacement  
+finished some rwd work.
+
+started lef-panel content(previous jobs exp)
+
+2018/2/22
+	Project cholintsai init(personal website)

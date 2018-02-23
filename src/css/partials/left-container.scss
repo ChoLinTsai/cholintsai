@@ -28,5 +28,25 @@ section#left-container {
 		@include gridColRow(2,3,2,3);
 		background: #A1D9FF;
 		border-radius: 5px 0 0 5px;
+		display: grid;
+		grid-template-columns:
+			[col-1] 1fr [col-2];
+		grid-template-rows:
+			[row-1] 1fr [row-2] 1fr [row-3] 1fr [row-4];
+		aside.left-asides {
+
+		}
+		aside#aside-1 {
+			@include gridColRow(col-1,col-2,row-1,row-2);
+			background: #333;
+		}
+		aside#aside-2 {
+			@include gridColRow(col-1,col-2,row-2,row-3);
+			background: red;
+		}
+		aside#aside-3 {
+			@include gridColRow(col-1,col-2,row-3,row-4);
+			background: yellow;
+		}
 	}
 }
