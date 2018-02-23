@@ -1,7 +1,16 @@
 /* laptop xl or desktop */
 @media screen and (max-width: 1440px) {}
 /* laptop sm */
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+	div#master-wrap {
+		@include wh(normal, 100vw, 100vh);
+		display: grid;
+		grid-template-columns:
+			[col-1] 1fr [col-2] 2fr [col-3];
+		grid-template-rows:
+			[row-1] 1fr [row-2];
+	}
+}
 
 /* tablet lg */
 @media screen and (max-width: 992px) {
@@ -15,7 +24,9 @@
 	}
 }
 /* tablet sm */
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+}
 /* mobile lg */
 @media screen and (max-width: 576px) {}
 /* mobile lg */
