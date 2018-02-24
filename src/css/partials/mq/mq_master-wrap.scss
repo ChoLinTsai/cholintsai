@@ -1,15 +1,16 @@
 /* laptop xl or desktop */
-@media screen and (max-width: 1440px) {}
-/* laptop sm */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
 	div#master-wrap {
-		@include wh(normal, 100vw, 100vh);
+		@include wh(normal, 100%, 100vh);
 		display: grid;
 		grid-template-columns:
 			[col-1] 1fr [col-2] 2fr [col-3];
 		grid-template-rows:
 			[row-1] 1fr [row-2];
 	}
+}
+/* laptop sm */
+@media screen and (max-width: 1200px) {
 }
 
 /* tablet lg */

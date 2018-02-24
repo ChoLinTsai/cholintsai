@@ -1,15 +1,19 @@
 /* laptop xl or desktop */
-@media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1440px) {
+}
 /* laptop sm */
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+	section#left-container {
+		div#left-panel {
+
+		}
+	}
+}
 /* tablet lg */
 @media screen and (max-width: 992px) {
 	section#left-container {
 		@include wh(normal, 100%, 100vh);
 		@include gridColRow(1,3,2,2);
-		background: #005792;
-		position: relative;
-		display: grid;
 		grid-template-columns:
 			[col-1] 1fr [col-2] 200px [col-3];
 		grid-template-rows:
@@ -18,23 +22,15 @@
 		div#left-title-wrap {
 			width: 100%;
 			@include gridColRow(2,3,1,2);
-			@include flex(space-between, center);
 			flex-direction: column-reverse;
-			padding: 0 1rem;
 
 			p.past {
-				margin: 0;
-				position: relative;
 				font-size: 3.5rem;
-				color: #00204A;
-				opacity: 0.2;
 			}
 		}
 
 		div#left-panel {
 			@include gridColRow(1,2,1,2);
-			background: #A1D9FF;
-			border-radius: 5px 0 0 5px;
 		}
 	}
 
@@ -73,8 +69,6 @@
 
 		div#left-panel {
 			@include gridColRow(1,2,1,2);
-			background: #A1D9FF;
-			border-radius: 5px 0 0 5px;
 		}
 	}
 }

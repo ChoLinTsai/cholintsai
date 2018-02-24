@@ -8,4 +8,12 @@ body {
 	font-family: 'cantano';
 	line-height: 1.5;
 	background: #D9FAFF;
+	@include wh(normal, 100vw, 100vh);
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	font-family: 'cantana';
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
 }
