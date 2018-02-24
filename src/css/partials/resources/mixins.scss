@@ -1,5 +1,5 @@
 /* width and height shorthand */
-@mixin wh($type, $width, $height) {
+@mixin wh($type:normal, $width:100%, $height:100%) {
 	@if $type == "max" {
 		max-width: $width;
 		max-height: $height;
@@ -14,7 +14,7 @@
 	}
 }
 /* for testing layout */
-@mixin bdr($line, $color) {
+@mixin bdr($line:2px, $color:red) {
 	border: $line solid $color;
 }
 /* grid template cols and rows*/
@@ -58,12 +58,12 @@
 	background-attachment: $attachment;
 }
 /* flexbox mixin */
-@mixin flex($main, $cross) {
+@mixin flex($main:center, $cross:center) {
 	display: flex;
 	justify-content: $main;
 	align-items: $cross;
 }
-@mixin gridItemPosition($justify, $align) {
+@mixin gridItemPosition($justify:center, $align:center) {
 	justify-self: $justify;
 	align-self: $align;
 }
