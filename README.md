@@ -1,3 +1,11 @@
+## 2018/2/25
+
+right panel still working in progress
+
+Mondrianizm designer layout is pretty hard, even use grid layout.
+
+It still takes much more time than I expected.
+
 ## 2018/2/24
 
 finished left panel, but I took some time to test left panel layout in rwd
