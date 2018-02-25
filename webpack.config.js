@@ -141,15 +141,16 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, ""),
+    contentBase: path.join(__dirname, "./src"),
     compress: true,
-    // hot: true,
+    hot: true,
     stats: "errors-only",
+		watchContentBase: true,
     // open: true,
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       title: 'Cho Lin Tsai',
       template: './src/index.html',
@@ -160,7 +161,7 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: './css/[name].css',
-      // disable: !isProd,
+      disable: !isProd,
       allChunks: true
     }),
     // new webpack.DefinePlugin({
