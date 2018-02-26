@@ -25,19 +25,21 @@ section#right-container {
 
 	div#right-panel {
 		@include wh;
-		@include gridColRow(1,2,2,3);
+		@include gridColRow(col-1,col-2,row-2,row-3);
 		background: #ECFAFB;
 		display: grid;
 		grid-template-columns: [col-1] 2fr [col-2] 1fr [col-3];
 		grid-template-rows: [row-1] 1fr [row-2];
 
 		main#main-info {
-			@include wh;
 			@include gridColRow(col-1, col-2, row-1, row-2);
-			background: mistyrose;
+			background: #fff;
 			display: grid;
-			grid-template-columns: [col-1] 1fr [col-2];
-			grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3] 1fr [row-4];
+			grid-template-columns:
+				[col-1] 1fr [col-2];
+			grid-template-rows:
+				[row-1] 1fr [row-2] 1fr
+				[row-3] 1fr [row-4];
 
 			div#info-wrap {
 				@include gridColRow(col-1, col-2, row-1, row-2);
@@ -64,6 +66,7 @@ section#right-container {
 						@include gridItemPosition(center, center);
 						margin: 0.5rem;
 						font-weight: bold;
+						font-size: 2.5rem;
 					}
 
 					div#my-social {
@@ -92,6 +95,31 @@ section#right-container {
 					}
 				}
 			}
+
+			div#my-details {
+				@include gridColRow(col-1, col-2, row-2, row-4);
+				background: mistyrose;
+				display: grid;
+				grid-template-columns:
+					[col-1] 1fr [col-2];
+				grid-template-rows:
+					[row-1] 1fr [row-2] 1fr [row-3];
+				div#my-skill-wrap {
+					@include wh;
+					@include flex(center, center);
+					padding: 1rem;
+					background: #0881A3;
+					color: #D9FAFF;
+					p#my-skills {
+						font-size: 1.15rem;
+						line-height: 2;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		article#showcases {
+			@include gridColRow(col-2,col-3,row-1,row-2);
 		}
 	}
 }

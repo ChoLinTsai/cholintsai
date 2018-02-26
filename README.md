@@ -1,8 +1,14 @@
+## 2018/2/26
+
+main info section finished include rwd, but still need more tests.
+
+I'll recolor everything after all layout and content are finished.
+
 ## 2018/2/25
 
 right panel still working in progress
 
-Mondrianizm designer layout is pretty hard, even use grid layout.
+Mondrianizm designe layout is pretty hard, even use grid layout.
 
 It still takes much more time than I expected.
 

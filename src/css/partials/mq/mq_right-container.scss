@@ -11,9 +11,22 @@
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 125px [col-2] 125px [col-3] 1fr [col-4];
+								[col-1] 115px [col-2] 115px [col-3] 1fr [col-4];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
+						}
+					}
+				}
+				div#my-details {
+					display: grid;
+					grid-template-columns:
+						[col-1] 1fr [col-2];
+					grid-template-rows:
+						[row-1] 1fr [row-2];
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1.15rem;
+							line-height: 2;
 						}
 					}
 				}
@@ -31,16 +44,26 @@
 					display: grid;
 					grid-template-columns: [col-1] 200px [col-2] 2fr [col-3];
 					grid-template-rows: [row-1] 1fr [row-2];
-					h1#my-name {
-						font-size: 1.5rem;
-					}
+
 					div#my-info {
+						h1#my-name {
+							font-size: 2.5vw;
+						}
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 1fr [col-2] 1fr [col-3];
+								[col-1] 115px [col-2] 115px [col-3];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
+						}
+					}
+				}
+
+				div#my-details {
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1.15rem;
+							line-height: 1.75;
 						}
 					}
 				}
@@ -94,7 +117,7 @@
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 150px [col-2] 150px [col-3] 1fr [col-4];
+								[col-1] 115px [col-2] 115px [col-3] 1fr [col-4];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
 						}
@@ -107,6 +130,7 @@
 /* tablet sm */
 @media screen and (max-width: 768px) {
 	section#right-container {
+		@include wh(max, 100vw, 100vh);
 		display: grid;
 		grid-template-columns:
 			[col-1] 70px [col-2] 1fr [col-3];
@@ -125,6 +149,7 @@
 				writing-mode: vertical-rl;
 			}
 		}
+
 		div#right-panel {
 			@include gridColRow(col-2,col-3,row-1,row-2);
 			background: #ECFAFB;
@@ -132,15 +157,17 @@
 			grid-template-columns:
 				[col-1] 1fr [col-2];
 			grid-template-rows:
-				[row-1] 3fr [row-2] 2fr [row-3];
+				[row-1] 1fr [row-2] 4fr [row-3];
 			main#main-info {
+
 				@include gridColRow(col-1, col-2, row-1, row-2);
 				display: grid;
 				grid-template-columns:
 					[col-1] 1fr [col-2];
 				grid-template-rows:
-					[row-1] 1fr [row-2] 2fr [row-3];
+					[row-1] 2fr [row-2] 3fr [row-3];
 				div#info-wrap {
+					@include gridColRow(col-1, col-2, row-1, row-2);
 					display: grid;
 					grid-template-columns: [col-1] 200px [col-2] 2fr [col-3];
 					grid-template-rows: [row-1] 1fr [row-2];
@@ -149,12 +176,16 @@
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 125px [col-2] 125px [col-3] 1fr [col-4];
+								[col-1] 115px [col-2] 115px [col-3] 1fr [col-4];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
 						}
 					}
 				}
+			}
+			article#showcases {
+				@include gridColRow(col-1, col-2, row-2, row-3);
+				background: yellow;
 			}
 		}
 	}
@@ -181,7 +212,7 @@
 			padding: 1rem 0;
 		}
 		div#right-panel {
-			@include gridColRow(2,3,1,2);
+			@include gridColRow(col-2,col-3,row-1,row-2);
 			background: #ECFAFB;
 			display: grid;
 			grid-template-columns:
@@ -191,15 +222,38 @@
 			main#main-info {
 				div#info-wrap {
 					div#my-info {
+						display: grid;
+						grid-template-columns:
+							[col-1] 1fr [col-2] 2fr [col-3];
+						grid-template-rows:
+							[row-1] 1fr [row-2] 1fr [row-3];
 						h1#my-name {
-							font-size: 2rem;
+							@include gridColRow(col-1,col-2,row-1,row-3);
+							font-size: 1.5rem;
+							writing-mode: tb;
 						}
 						div#my-social {
+							@include gridColRow(col-2,col-3,row-1,row-3);
 							display: grid;
 							grid-template-columns:
-								[col-1] 1fr [col-2] 1fr [col-3];
+								[col-1] 90px [col-2] 1fr [col-3];
 							grid-template-rows:
-								[row-1] 1fr [row-2];
+								[row-1] 1fr [row-2] 1fr [row-3];
+							a#social-github {
+								@include gridColRow(col-1,col-2,row-1,row-2);
+							}
+							a#social-linkedin {
+								@include gridColRow(col-1,col-2,row-2,row-3);
+							}
+						}
+					}
+				}
+
+				div#my-details {
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1rem;
+							line-height: 1.75;
 						}
 					}
 				}
@@ -208,9 +262,9 @@
 	}
 }
 /* mobile lg */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
 	section#right-container {
-		@include wh(normal, 100%, 100vh);
+		@include wh(normal, 100vw, 100vh);
 		@include gridColRow(1,3,1,2);
 		background: #00BBF0;
 		position: relative;
@@ -239,6 +293,9 @@
 				[row-1] 3fr [row-2] 2fr [row-3];
 			main#main-info {
 				div#info-wrap {
+					display: grid;
+					grid-template-columns: [col-1] 175px [col-2] 2fr [col-3];
+					grid-template-rows: [row-1] 1fr [row-2];
 					div#my-info {
 						display: grid;
 						grid-template-columns:
@@ -274,6 +331,78 @@
 	}
 }
 /* mobile md */
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 375px) {
+	section#right-container {
+		div#right-panel {
+			main#main-info {
+				display: grid;
+				grid-template-columns:
+					[col-1] 1fr [col-2];
+				grid-template-rows:
+					[row-1] 175px [row-2] 1fr [row-3];
+				div#info-wrap {
+					display: grid;
+					grid-template-columns: [col-1] 130px [col-2] 2fr [col-3];
+					grid-template-rows: [row-1] 1fr [row-2];
+				}
+
+				div#my-details {
+					@include gridColRow(col-1, col-2, row-2, row-3);
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1rem;
+							line-height: 1.5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 /* mobile sm */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+	section#right-container {
+		display: grid;
+		grid-template-columns:
+			[col-1] 35px [col-2] 1fr [col-3];
+		grid-template-rows:
+			[row-1] 1fr [row-2];
+		div#right-title-wrap {
+			p.past {
+				font-size: 1.5rem;
+				opacity: 0.3;
+			}
+		}
+
+		div#right-panel {
+			main#main-info {
+				display: grid;
+				grid-template-columns:
+					[col-1] 1fr [col-2];
+				grid-template-rows:
+					[row-1] 150px [row-2] 1fr [row-3];
+				div#info-wrap {
+					display: grid;
+					grid-template-columns: [col-1] 130px [col-2] 2fr [col-3];
+					grid-template-rows: [row-1] 150px [row-2];
+					div#my-info {
+						h1#my-name {
+							font-size: 1.25rem;
+						}
+					}
+				}
+
+				div#my-details {
+					@include wh(max,100%,100%);
+					@include gridColRow(col-1, col-2, row-2, row-3);
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1rem;
+							line-height: 1.5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
