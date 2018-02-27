@@ -1,17 +1,24 @@
 /* laptop xl or desktop */
 @media screen and (max-width: 1440px) {
 	section#right-container {
+		display: grid;
+		grid-template-columns:
+			[col-1] 12fr [col-2] 1fr [col-3];
+		grid-template-rows:
+			[row-1] 100px [row-2] 1fr [row-3] 100px [row-4];
 		div#right-panel {
 			main#main-info {
 				div#info-wrap {
 					display: grid;
-					grid-template-columns: [col-1] 250px [col-2] 2fr [col-3];
-					grid-template-rows: [row-1] 1fr [row-2];
+					grid-template-columns:
+						[col-1] 200px [col-2] 2fr [col-3];
+					grid-template-rows:
+						[row-1] 1fr [row-2];
 					div#my-info {
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 115px [col-2] 115px [col-3] 1fr [col-4];
+								[col-1] 95px [col-2] 95px [col-3] 1fr [col-4];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
 						}
@@ -63,7 +70,7 @@
 					div#my-skill-wrap {
 						p#my-skills {
 							font-size: 1.15rem;
-							line-height: 1.75;
+							line-height: 2;
 						}
 					}
 				}
@@ -157,9 +164,8 @@
 			grid-template-columns:
 				[col-1] 1fr [col-2];
 			grid-template-rows:
-				[row-1] 1fr [row-2] 4fr [row-3];
+				[row-1] 1fr [row-2] 1fr [row-3];
 			main#main-info {
-
 				@include gridColRow(col-1, col-2, row-1, row-2);
 				display: grid;
 				grid-template-columns:
@@ -171,12 +177,11 @@
 					display: grid;
 					grid-template-columns: [col-1] 200px [col-2] 2fr [col-3];
 					grid-template-rows: [row-1] 1fr [row-2];
-
 					div#my-info {
 						div#my-social {
 							display: grid;
 							grid-template-columns:
-								[col-1] 115px [col-2] 115px [col-3] 1fr [col-4];
+								[col-1] 100px [col-2] 100px [col-3] 1fr [col-4];
 							grid-template-rows:
 								[row-1] 1fr [row-2];
 						}
@@ -185,7 +190,6 @@
 			}
 			article#showcases {
 				@include gridColRow(col-1, col-2, row-2, row-3);
-				background: yellow;
 			}
 		}
 	}
@@ -236,7 +240,7 @@
 							@include gridColRow(col-2,col-3,row-1,row-3);
 							display: grid;
 							grid-template-columns:
-								[col-1] 90px [col-2] 1fr [col-3];
+								[col-1] 115px [col-2] 1fr [col-3];
 							grid-template-rows:
 								[row-1] 1fr [row-2] 1fr [row-3];
 							a#social-github {
@@ -252,7 +256,7 @@
 				div#my-details {
 					div#my-skill-wrap {
 						p#my-skills {
-							font-size: 1rem;
+							font-size: 1.15rem;
 							line-height: 1.75;
 						}
 					}

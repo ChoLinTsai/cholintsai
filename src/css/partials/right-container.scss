@@ -4,7 +4,7 @@ section#right-container {
 	background: #00BBF0;
 	position: relative;
 	display: grid;
-	grid-template-columns: [col-1] 1fr [col-2] 100px [col-3];
+	grid-template-columns: [col-1] 8fr [col-2] 1fr [col-3];
 	grid-template-rows: [row-1] 100px [row-2] 1fr [row-3] 100px [row-4];
 
 	div#right-title-wrap {
@@ -35,11 +35,8 @@ section#right-container {
 			@include gridColRow(col-1, col-2, row-1, row-2);
 			background: #fff;
 			display: grid;
-			grid-template-columns:
-				[col-1] 1fr [col-2];
-			grid-template-rows:
-				[row-1] 1fr [row-2] 1fr
-				[row-3] 1fr [row-4];
+			grid-template-columns: [col-1] 1fr [col-2];
+			grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3] 1fr [row-4];
 
 			div#info-wrap {
 				@include gridColRow(col-1, col-2, row-1, row-2);
@@ -59,7 +56,7 @@ section#right-container {
 					@include gridColRow(col-2, col-3, row-1, row-2);
 					display: grid;
 					grid-template-columns: [col-1] 1fr [col-2];
-					grid-template-rows: [row-1] 2fr [row-2] 3fr [row-3];
+					grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 
 					h1#my-name {
 						@include gridColRow(col-1, col-2, row-1, row-2);
@@ -73,10 +70,8 @@ section#right-container {
 						@include gridColRow(col-1, col-2, row-2, row-3);
 						background: #FFDD00;
 						display: grid;
-						grid-template-columns:
-							[col-1] 150px [col-2] 150px [col-3] 1fr [col-4];
-						grid-template-rows:
-							[row-1] 1fr [row-2];
+						grid-template-columns: [col-1] 125px [col-2] 125px [col-3] 1fr [col-4];
+						grid-template-rows: [row-1] 1fr [row-2];
 
 						a {
 							@include wh;
@@ -88,6 +83,7 @@ section#right-container {
 							@include gridColRow(col-1, col-2, row-1, row-2);
 							@include bgimg('../img/github.jpg', no-repeat, center, center, cover);
 						}
+
 						a#social-linkedin {
 							@include gridColRow(col-2, col-3, row-1, row-2);
 							@include bgimg('../img/linkedin.jpg', no-repeat, center, center, cover);
@@ -100,16 +96,16 @@ section#right-container {
 				@include gridColRow(col-1, col-2, row-2, row-4);
 				background: mistyrose;
 				display: grid;
-				grid-template-columns:
-					[col-1] 1fr [col-2];
-				grid-template-rows:
-					[row-1] 1fr [row-2] 1fr [row-3];
+				grid-template-columns: [col-1] 1fr [col-2];
+				grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
+
 				div#my-skill-wrap {
 					@include wh;
 					@include flex(center, center);
 					padding: 1rem;
 					background: #0881A3;
 					color: #D9FAFF;
+
 					p#my-skills {
 						font-size: 1.15rem;
 						line-height: 2;
@@ -117,9 +113,6 @@ section#right-container {
 					}
 				}
 			}
-		}
-		article#showcases {
-			@include gridColRow(col-2,col-3,row-1,row-2);
 		}
 	}
 }

@@ -1,0 +1,131 @@
+/* laptop xl or desktop */
+@media screen and (max-width: 1440px) {
+	article#project-section {
+		div#project-title {
+			h3 {
+				font-size: 2.5rem;
+			}
+		}
+
+		a {
+			div.my-projects {
+				display: grid;
+				grid-template-columns:
+					[col-1] 100px [col-2] 1fr [col-3];
+				grid-template-rows:
+					[row-1] 1fr [row-2];
+				p.project-names {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+/* laptop sm */
+@media screen and (max-width: 1200px) {
+	article#project-section {
+		div#project-title {
+			h3 {
+				font-size: 2rem;
+			}
+		}
+
+		a {
+			div.my-projects {
+				display: grid;
+				grid-template-columns:
+					[col-1] 120px [col-2] 1fr [col-3];
+				grid-template-rows:
+					[row-1] 1fr [row-2];
+				p.project-names {
+					font-size: 1.15rem;
+				}
+			}
+		}
+	}
+}
+/* tablet lg */
+@media screen and (max-width: 992px) {
+	article#project-section {
+		@include gridColRow(col-1,col-2,row-2,row-3);
+		display: grid;
+		grid-template-columns:
+			[col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr
+			[col-5] 1fr [col-6] 1fr [col-7];
+		grid-template-rows:
+			[row-1] 1fr [row-2];
+		div#project-title {
+			@include gridColRow(col-1, col-2, row-1, row-2);
+			@include flex;
+			h3 {
+				font-size: 2.5rem;
+				font-weight: bold;
+				writing-mode: tb;
+			}
+		}
+
+		a {
+
+			div.my-projects {
+				display: grid;
+				grid-template-columns:
+					[col-1] 1fr [col-2];
+				grid-template-rows:
+					[row-1] 128px [row-2] 1fr [row-3];
+
+				figure.project-figs {
+					@include gridColRow(col-1, col-2, row-1, row-2);
+				}
+
+				p.project-names {
+					@include gridColRow(col-1, col-2, row-2, row-3);
+					writing-mode: tb;
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		a#project-1-a {
+			@include gridColRow(col-2, col-3, row-1, row-2);
+		}
+
+		a#project-2-a {
+			@include gridColRow(col-3, col-4, row-1, row-2);
+		}
+
+		a#project-3-a {
+			@include gridColRow(col-4, col-5, row-1, row-2);
+		}
+
+		a#project-4-a {
+			@include gridColRow(col-5, col-6, row-1, row-2);
+		}
+
+		a#project-5-a {
+			@include gridColRow(col-6, col-7, row-1, row-2);
+		}
+
+	}
+}
+/* tablet sm */
+@media screen and (max-width: 768px) {}
+/* mobile lg */
+@media screen and (max-width: 576px) {
+	article#project-section {
+		a {
+			div.my-projects {
+				display: grid;
+				grid-template-columns:
+					[col-1] 1fr [col-2];
+				grid-template-rows:
+					[row-1] 85px [row-2] 1fr [row-3];
+			}
+		}
+	}
+}
+/* mobile lg */
+@media screen and (max-width: 425px) {}
+/* mobile md */
+@media screen and (max-width: 375px) {}
+/* mobile sm */
+@media screen and (max-width: 320px) {}
