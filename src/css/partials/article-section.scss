@@ -8,10 +8,12 @@ article#project-section {
 	div#project-title {
 		@include gridColRow(col-1, col-2, row-2, row-3);
 		@include flex;
+		background: #00204A;
 
 		h3 {
 			font-size: 3rem;
 			font-weight: bold;
+			color: #fdfdfd;
 		}
 	}
 
@@ -25,7 +27,7 @@ article#project-section {
 			display: grid;
 			grid-template-columns: [col-1] 128px [col-2] 1fr [col-3];
 			grid-template-rows: [row-1] 1fr [row-2];
-
+			/*background: #84577C; */
 			figure.project-figs {
 				@include wh;
 				@include gridColRow(col-1, col-2, row-1, row-2);
@@ -35,24 +37,36 @@ article#project-section {
 
 			p.project-names {
 				@include gridColRow(col-2, col-3, row-1, row-2);
-				font-size: 2rem;
 				@include gridItemPosition;
+				font-size: 2rem;
+				color: #fdfdfd;
+				margin: 0;
 			}
+		}
+
+		&:hover {
+			opacity: 0.9;
 		}
 	}
 
 	a#project-1-a {
 		@include gridColRow(col-1, col-2, row-1, row-2);
+		background: #00204A;
 
 		div#my-project-1 {
 			figure.project-figs {
 				@include bgimg('../img/icon-movie.jpg', no-repeat, center, center, cover);
+			}
+
+			p {
+				color: #fdfdfd;
 			}
 		}
 	}
 
 	a#project-2-a {
 		@include gridColRow(col-1, col-2, row-3, row-4);
+		background: #005792;
 
 		div#my-project-2 {
 			figure.project-figs {
@@ -63,6 +77,7 @@ article#project-section {
 
 	a#project-3-a {
 		@include gridColRow(col-1, col-2, row-4, row-5);
+		background: #005792;
 
 		div#my-project-3 {
 			figure.project-figs {
@@ -73,6 +88,7 @@ article#project-section {
 
 	a#project-4-a {
 		@include gridColRow(col-1, col-2, row-5, row-6);
+		background: #00BBF0;
 
 		div#my-project-4 {
 			figure.project-figs {
@@ -83,6 +99,7 @@ article#project-section {
 
 	a#project-5-a {
 		@include gridColRow(col-1, col-2, row-6, row-7);
+		background: #00BBF0;
 
 		div#my-project-5 {
 			figure.project-figs {

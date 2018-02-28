@@ -170,8 +170,16 @@
 					div#my-info {
 						div#my-social {
 							display: grid;
-							grid-template-columns: [col-1] 100px [col-2] 100px [col-3] 1fr [col-4];
+							grid-template-columns: [col-1] 95px [col-2] 95px [col-3] 1fr [col-4];
 							grid-template-rows: [row-1] 1fr [row-2];
+						}
+					}
+				}
+
+				div#my-details {
+					div#my-skill-wrap {
+						p#my-skills {
+							font-size: 1rem;
 						}
 					}
 				}
@@ -212,6 +220,10 @@
 
 			main#main-info {
 				div#info-wrap {
+					display: grid;
+					grid-template-columns: [col-1] 175px [col-2] 2fr [col-3];
+					grid-template-rows: [row-1] 1fr [row-2];
+
 					div#my-info {
 						display: grid;
 						grid-template-columns: [col-1] 1fr [col-2] 2fr [col-3];
@@ -226,7 +238,7 @@
 						div#my-social {
 							@include gridColRow(col-2,col-3,row-1,row-3);
 							display: grid;
-							grid-template-columns: [col-1] 115px [col-2] 1fr [col-3];
+							grid-template-columns: [col-1] 115px [col-2];
 							grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 
 							a#social-github {
@@ -243,8 +255,8 @@
 				div#my-details {
 					div#my-skill-wrap {
 						p#my-skills {
-							font-size: 1.15rem;
-							line-height: 1.75;
+							font-size: 1rem;
+							line-height: 1.5;
 						}
 					}
 				}
@@ -283,7 +295,7 @@
 				@include gridColRow(col-1, col-2, row-1, row-2);
 				display: grid;
 				grid-template-columns: [col-1] 1fr [col-2];
-				grid-template-rows: [row-1] 150px [row-2] 1fr [row-3];
+				grid-template-rows: [row-1] 175px [row-2] 1fr [row-3];
 
 				div#info-wrap {
 					display: grid;
@@ -292,10 +304,8 @@
 
 					div#my-info {
 						display: grid;
-						grid-template-columns:
-						[col-1] 1fr [col-2] 75px [col-3];
-						grid-template-rows:
-						[row-1] 1fr [row-2] 1fr [row-3];
+						grid-template-columns: [col-1] 1fr [col-2] 85px [col-3];
+						grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 
 						h1#my-name {
 							@include gridColRow(col-1, col-2, row-1, row-3);
@@ -323,6 +333,7 @@
 					div#my-skill-wrap {
 						padding: 0.5rem 1rem;
 						@include flex(center, flex-start);
+
 						p#my-skills {
 							font-size: 1rem;
 							line-height: 1.5;
@@ -345,10 +356,9 @@
 	section#right-container {
 		@include wh(normal, 100%, 100vh);
 		display: grid;
-		grid-template-columns:
-			[col-1] 40px [col-2] 1fr [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 40px [col-2] 1fr [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
+
 		div#right-title-wrap {
 			p.past {
 				font-size: 1.5rem;
@@ -356,11 +366,10 @@
 		}
 
 		div#right-panel {
-
 			main#main-info {
 				display: grid;
 				grid-template-columns: [col-1] 1fr [col-2];
-				grid-template-rows: [row-1] 150px [row-2] 1fr [row-3];
+				grid-template-rows: [row-1] 175px [row-2] 1fr [row-3];
 
 				div#info-wrap {
 					display: grid;
@@ -372,7 +381,9 @@
 					}
 
 					div#my-info {
-
+						display: grid;
+						grid-template-columns: [col-1] 1fr [col-2] 85px [col-3];
+						grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 					}
 				}
 
@@ -381,6 +392,7 @@
 
 					div#my-skill-wrap {
 						@include flex;
+
 						p#my-skills {
 							font-size: 1rem;
 							line-height: 1.3;
@@ -406,6 +418,10 @@
 		}
 
 		div#right-panel {
+			display: grid;
+			grid-template-columns: [col-1] 1fr [col-2];
+			grid-template-rows: [row-1] 2fr [row-2] 2fr [row-3];
+
 			main#main-info {
 				display: grid;
 				grid-template-columns: [col-1] 1fr [col-2];

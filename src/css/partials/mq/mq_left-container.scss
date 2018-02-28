@@ -2,10 +2,8 @@
 @media screen and (max-width: 1440px) {
 	section#left-container {
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 300px [col-3];
-		grid-template-rows:
-			[row-1] 100px [row-2] 1fr [row-3] 100px [row-4];
+		grid-template-columns: [col-1] 1fr [col-2] 300px [col-3];
+		grid-template-rows: [row-1] 100px [row-2] 1fr [row-3] 100px [row-4];
 
 		div#left-panel {
 			aside.left-asides {
@@ -24,10 +22,8 @@
 		@include wh(normal, 100%, 100vh);
 		@include gridColRow(1,3,2,2);
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 150px [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 1fr [col-2] 150px [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
 
 		div#left-title-wrap {
 			width: 100%;
@@ -43,7 +39,6 @@
 			@include gridColRow(1,2,1,2);
 
 			aside.left-asides {
-
 				h3 {
 					font-size: 2rem;
 				}
@@ -62,21 +57,19 @@
 			}
 		}
 	}
-
 }
 /* tablet sm */
 @media screen and (max-width: 768px) {
 	section#left-container {
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 70px [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 1fr [col-2] 70px [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
 
 		div#left-title-wrap {
 			@include gridColRow(col-2,col-3,row-1,row-2);
 			@include flex(space-between, center);
 			padding: 1rem 0;
+
 			p.past {
 				font-size: 2rem;
 				writing-mode: tb;
@@ -88,18 +81,13 @@
 @media screen and (max-width: 576px) {
 	section#left-container {
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 65px [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 1fr [col-2] 65px [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
 
-		div#left-title-wrap {
-
-		}
+		div#left-title-wrap {}
 
 		div#left-panel {
 			aside.left-asides {
-
 				h3 {
 					font-size: 1.5rem;
 				}
@@ -120,20 +108,15 @@
 	}
 }
 /* mobile lg */
-@media screen and (max-width: 425px) {
-
-}
+@media screen and (max-width: 425px) {}
 /* mobile md */
 @media screen and (max-width: 375px) {
 	section#left-container {
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 40px [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 1fr [col-2] 40px [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
 
 		div#left-title-wrap {
-
 			p.past {
 				font-size: 1.5rem;
 			}
@@ -144,6 +127,7 @@
 				h3 {
 					font-size: 1.15rem;
 				}
+
 				h2 {
 					font-size: 2rem;
 				}
