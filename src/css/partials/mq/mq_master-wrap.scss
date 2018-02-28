@@ -3,36 +3,41 @@
 	div#master-wrap {
 		@include wh(normal, 100vw, 100vh);
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 3fr [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2];
+		grid-template-columns: [col-1] 1fr [col-2] 3fr [col-3];
+		grid-template-rows: [row-1] 1fr [row-2];
 	}
 }
 /* laptop sm */
-@media screen and (max-width: 1200px) {
-}
-
+@media screen and (max-width: 1200px) {}
 /* tablet lg */
 @media screen and (max-width: 992px) {
 	div#master-wrap {
 		@include wh(normal, 100vw, 1500px);
 		display: grid;
-		grid-template-columns:
-			[col-1] 1fr [col-2] 3fr [col-3];
-		grid-template-rows:
-			[row-1] 1fr [row-2] 1fr [row-3];
+		grid-template-columns: [col-1] 1fr [col-2] 3fr [col-3];
+		grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 	}
 }
 /* tablet sm */
-@media screen and (max-width: 768px) {
-
-}
+@media screen and (max-width: 768px) {}
 /* mobile lg */
 @media screen and (max-width: 576px) {}
 /* mobile lg */
-@media screen and (max-width: 425px) {}
+@media screen and (max-width: 425px) {
+	div#master-wrap {
+		@include wh(normal, 100vw, 100%);
+		display: grid;
+		grid-template-columns: [col-1] 1fr [col-2] 3fr [col-3];
+		grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
+	}
+}
 /* mobile md */
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 375px) {
+	div#master-wrap {
+		display: grid;
+		grid-template-columns: [col-1] 1fr [col-2] 3fr [col-3];
+		grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
+	}
+}
 /* mobile sm */
 @media screen and (max-width: 320px) {}

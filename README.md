@@ -1,3 +1,13 @@
+## 2018/2/28
+
+project cholintsai finished
+
+coloring is not a easy task to do...
+
+will learn some more about color theory
+
+
+
 ## 2018/2/27
 
 article section started and still working

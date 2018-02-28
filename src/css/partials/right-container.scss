@@ -17,8 +17,8 @@ section#right-container {
 			margin: 0;
 			position: relative;
 			font-size: 3rem;
-			color: #005792;
-			opacity: 0.2;
+			color: #333;
+			opacity: 0.1;
 			text-transform: uppercase;
 		}
 	}
@@ -57,18 +57,20 @@ section#right-container {
 					display: grid;
 					grid-template-columns: [col-1] 1fr [col-2];
 					grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
-
+					background: #00204A;
+					/*404969*/
 					h1#my-name {
 						@include gridColRow(col-1, col-2, row-1, row-2);
 						@include gridItemPosition(center, center);
 						margin: 0.5rem;
 						font-weight: bold;
 						font-size: 2.5rem;
+						color: #fdfdfd;
 					}
 
 					div#my-social {
 						@include gridColRow(col-1, col-2, row-2, row-3);
-						background: #FFDD00;
+						background: #00204A;
 						display: grid;
 						grid-template-columns: [col-1] 125px [col-2] 125px [col-3] 1fr [col-4];
 						grid-template-rows: [row-1] 1fr [row-2];
@@ -94,7 +96,7 @@ section#right-container {
 
 			div#my-details {
 				@include gridColRow(col-1, col-2, row-2, row-4);
-				background: mistyrose;
+				background: #D9FAFF;
 				display: grid;
 				grid-template-columns: [col-1] 1fr [col-2];
 				grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
@@ -103,8 +105,9 @@ section#right-container {
 					@include wh;
 					@include flex(center, center);
 					padding: 1rem;
-					background: #0881A3;
-					color: #D9FAFF;
+					background: #005792;
+					/*404969*/
+					color: #fdfdfd;
 
 					p#my-skills {
 						font-size: 1.15rem;
