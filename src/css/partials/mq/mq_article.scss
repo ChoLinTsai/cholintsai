@@ -124,8 +124,139 @@
 	}
 }
 /* mobile lg */
-@media screen and (max-width: 425px) {}
+@media screen and (max-width: 425px) {
+	article#project-section {
+		@include wh;
+		display: grid;
+		grid-template-columns:
+			[col-1] 1fr [col-2];
+		grid-template-rows:
+			[row-1] 1fr [row-2] 1fr [row-3] 1fr [row-4] 1fr
+			[row-5] 1fr [row-6] 1fr [row-7];
+
+		div#project-title {
+			@include gridColRow(col-1, col-2, row-1, row-2);
+			h3 {
+				writing-mode: lr;
+			}
+		}
+
+		a {
+
+			div.my-projects {
+				display: grid;
+				grid-template-columns:
+					[col-1] 64px [col-2] 1fr [col-3];
+				grid-template-rows:
+					[row-1] 1fr [row-2];
+
+				figure.project-figs {
+					@include gridColRow(col-1, col-2, row-1, row-2);
+					margin: 0;
+				}
+
+				p.project-names {
+					@include gridColRow(col-2, col-3, row-1, row-2);
+					margin: 0;
+					writing-mode: lr;
+				}
+			}
+		}
+
+		a#project-1-a {
+			@include gridColRow(col-1, col-2, row-2, row-3);
+		}
+
+		a#project-2-a {
+			@include gridColRow(col-1, col-2, row-3, row-4);
+		}
+
+		a#project-3-a {
+			@include gridColRow(col-1, col-2, row-4, row-5);
+		}
+
+		a#project-4-a {
+			@include gridColRow(col-1, col-2, row-5, row-6);
+		}
+
+		a#project-5-a {
+			@include gridColRow(col-1, col-2, row-6, row-7);
+		}
+	}
+}
 /* mobile md */
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 375px) {
+	article#project-section {
+
+		div#project-title {
+
+			h3 {
+				font-size: 2rem;
+				margin: 0;
+			}
+		}
+
+		a {
+			div.my-projects {
+				display: grid;
+				grid-template-columns: [col-1] 46px [col-2] 1fr [col-3];
+				grid-template-rows: [row-1] 1fr [row-2];
+				p.project-names {
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+}
 /* mobile sm */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+	article#project-section {
+		display: grid;
+		grid-template-columns:
+			[col-1] 1fr [col-2] 1fr [col-3];
+		grid-template-rows:
+			[row-1] 1fr [row-2] 1fr [row-3] 1fr [row-4] ;
+
+		div#project-title {
+			@include gridColRow(col-1, col-2, row-1, row-2);
+
+			h3 {
+				font-size: 1.5rem;
+			}
+		}
+
+		a {
+
+			div.my-projects {
+				display: grid;
+				grid-template-columns: [col-1] 70px [col-2] 1fr [col-3];
+				grid-template-rows: [row-1] 1fr [row-2];
+
+				p.project-names {
+					font-size: 0.5rem;
+				}
+			}
+		}
+
+		a#project-1-a {
+			@include gridColRow(col-2, col-3, row-1, row-2);
+		}
+
+		a#project-2-a {
+			@include gridColRow(col-1, col-2, row-2, row-3);
+		}
+
+		a#project-3-a {
+			@include gridColRow(col-2, col-3, row-2, row-3);
+		}
+
+		a#project-4-a {
+			@include gridColRow(col-1, col-2, row-3, row-4);
+		}
+
+		a#project-5-a {
+			@include gridColRow(col-2, col-3, row-3, row-4);
+		}
+
+	}
+}

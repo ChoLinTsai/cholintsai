@@ -30,6 +30,7 @@ article#project-section {
 				@include wh;
 				@include gridColRow(col-1, col-2, row-1, row-2);
 				display: block;
+				margin: 0;
 			}
 
 			p.project-names {

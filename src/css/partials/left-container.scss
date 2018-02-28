@@ -40,26 +40,36 @@ section#left-container {
 			@include wh;
 			display: grid;
 			grid-template-columns:
-				[col-1] 1fr [col-2];
+				[col-1] 1fr [col-2] 1fr [col-3];
 			grid-template-rows:
 				[row-1] 50px [row-2] 1fr [row-3] 50px [row-4];
+
 			h3 {
 				margin: 0.5rem;
 				font-size: 1.25rem;
-				@include gridColRow(col-1,col-2,row-1,row-2);
+				@include gridColRow(col-1,col-3,row-1,row-2);
 				@include gridItemPosition(start, center);
+
 			}
+
 			h2 {
 				font-size: 2.25rem;
-				@include gridColRow(col-1,col-2,row-2,row-3);
+				@include gridColRow(col-1,col-3,row-2,row-3);
 				@include gridItemPosition;
 			}
-			p {
+
+			p.duration {
+				margin: 0.5rem;
+				font-size: 1rem;
+				@include gridColRow(col-2,col-3,row-3,row-4);
+				@include gridItemPosition(end,center);
+			}
+
+			p.skilled {
 				margin: 0.5rem;
 				font-size: 1rem;
 				@include gridColRow(col-1,col-2,row-3,row-4);
-				@include gridItemPosition(end,center);
-
+				@include gridItemPosition(start,center);
 			}
 		}
 
