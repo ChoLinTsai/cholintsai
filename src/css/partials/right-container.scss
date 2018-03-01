@@ -1,7 +1,7 @@
 section#right-container {
 	@include wh(normal, 100%, 100vh);
 	@include gridColRow(2,3,1,2);
-	background: #00BBF0;
+	background: $third-blue;
 	position: relative;
 	display: grid;
 	grid-template-columns: [col-1] 8fr [col-2] 1fr [col-3];
@@ -57,7 +57,7 @@ section#right-container {
 					display: grid;
 					grid-template-columns: [col-1] 1fr [col-2];
 					grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
-					background: #00204A;
+					background: $primary-blue;
 					/*404969*/
 					h1#my-name {
 						@include gridColRow(col-1, col-2, row-1, row-2);
@@ -70,7 +70,7 @@ section#right-container {
 
 					div#my-social {
 						@include gridColRow(col-1, col-2, row-2, row-3);
-						background: #00204A;
+						background: $primary-blue;
 						display: grid;
 						grid-template-columns: [col-1] 125px [col-2] 125px [col-3] 1fr [col-4];
 						grid-template-rows: [row-1] 1fr [row-2];
@@ -105,8 +105,7 @@ section#right-container {
 					@include wh;
 					@include flex(center, center);
 					padding: 1rem;
-					background: #005792;
-					/*404969*/
+					background: $secondary-blue;
 					color: #fdfdfd;
 
 					p#my-skills {

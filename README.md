@@ -1,3 +1,9 @@
+## 2018/3/1
+
+a few ajustments and recolored
+
+
+
 ## 2018/2/28
 
 project cholintsai finished
