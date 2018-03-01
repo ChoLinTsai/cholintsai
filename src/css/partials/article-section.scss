@@ -8,7 +8,7 @@ article#project-section {
 	div#project-title {
 		@include gridColRow(col-1, col-2, row-2, row-3);
 		@include flex;
-		background: #00204A;
+		background: $primary-blue;
 
 		h3 {
 			font-size: 3rem;
@@ -51,7 +51,7 @@ article#project-section {
 
 	a#project-1-a {
 		@include gridColRow(col-1, col-2, row-1, row-2);
-		background: #00204A;
+		background: $primary-blue;
 
 		div#my-project-1 {
 			figure.project-figs {
@@ -66,7 +66,7 @@ article#project-section {
 
 	a#project-2-a {
 		@include gridColRow(col-1, col-2, row-3, row-4);
-		background: #005792;
+		background: $secondary-blue;
 
 		div#my-project-2 {
 			figure.project-figs {
@@ -77,7 +77,7 @@ article#project-section {
 
 	a#project-3-a {
 		@include gridColRow(col-1, col-2, row-4, row-5);
-		background: #005792;
+		background: $secondary-blue;
 
 		div#my-project-3 {
 			figure.project-figs {
@@ -88,7 +88,7 @@ article#project-section {
 
 	a#project-4-a {
 		@include gridColRow(col-1, col-2, row-5, row-6);
-		background: #00BBF0;
+		background: $third-blue;
 
 		div#my-project-4 {
 			figure.project-figs {
@@ -99,7 +99,7 @@ article#project-section {
 
 	a#project-5-a {
 		@include gridColRow(col-1, col-2, row-6, row-7);
-		background: #00BBF0;
+		background: $third-blue;
 
 		div#my-project-5 {
 			figure.project-figs {
